@@ -15,14 +15,11 @@ interface CountdownContextData {
   startCountdown: () => void;
   resetCountdown: () => void;
 }
-interface CountdownProviderProps {
-  children: ReactNode;
-}
 
 let countdownTimeout: NodeJS.Timeout;
 export const CountdownContext = createContext({} as CountdownContextData);
 
-export function CountdownProvider({ children }: CountdownProviderProps) {
+export function CountdownProvider({ children }) {
   const [time, setTime] = useState(25 * 60);
   const [isActive, setIsActive] = useState(false);
   const [hasFinished, setHasFinished] = useState(false);
