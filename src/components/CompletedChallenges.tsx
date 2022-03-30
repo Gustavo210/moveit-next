@@ -6,7 +6,7 @@ export function CompletedChallenges() {
   const { challengesCompleted } = useContext(ChallengesContext);
   return (
     <div className={styles.completedChallengesContainer}>
-      <span>Disafios completos</span>
+      <span>Desafios completos</span>
       <span>{challengesCompleted}</span>
     </div>
   );
